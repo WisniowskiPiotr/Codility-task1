@@ -33,7 +33,7 @@ class line_collection{
   };
 };
 
-int main(vector<vector<int>> &A){
+int solution(vector<vector<int>> &A){
   int Index_x=A.size();
   int Index_y=A[0].size();
   // co jeśli któryś wiersz ma mniej elementów?
@@ -59,4 +59,11 @@ int main(vector<vector<int>> &A){
       };
     };
   };
+};
+
+int main(){
+  vector<vector<int>> &A{{1, -1, 1},
+                         {1, -1, 0}};
+  cout<<solution(A)<<"\n";
+
 };
