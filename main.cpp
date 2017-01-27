@@ -47,7 +47,7 @@ int solution(vector< vector<int> > &A){
   line_collection Lines_y(Index_y);
   int result=0;
 
-  vector<int> tmp(Index_y);
+  vector<int> tmp(Index_y, 0);
   for(int j=0;j<Index_y;j++){
     for(int i=0;i<Index_x;i++){
       Lines_x.Lines[i].SetSum(A[i]);
@@ -78,7 +78,7 @@ int main(int argc,char *argv[]){
      { 1, 0, -1}};
   cout<<solution(A)<<"\n";
 
-  A={{0, 0, 0}, {1, -1, 0}};
+  A={{0, 2, 0}, {1, -1, 0}};
   cout<<solution(A)<<"\n";
 
   A={{}};
