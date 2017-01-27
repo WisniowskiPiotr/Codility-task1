@@ -1,10 +1,14 @@
 #include <vector>
+#include <iostream>
+using namespace std;
 
 class line{
-  private: long long int Sum=0;
+  private: 
+  long long int Sum;
   
   public: 
-  void Sum(vector<line> a){
+  void SetSum(vector<int> a){
+    Sum=0;
     for(int i=0;i<a.size();i++)
       Sum+=a[i];
   };
@@ -46,10 +50,10 @@ int solution(vector< vector<int> > &A){
   vector<int> tmp(Index_y);
   for(int j=0;j<Index_y;j++){
     for(int i=0;i<Index_x;i++){
-      Lines_x.Lines[i].Sum(A[i]);
+      Lines_x.Lines[i].SetSum(A[i]);
       tmp[j]=A[i][j];
     };
-    Lines_y.Lines[j].Sum(tmp);
+    Lines_y.Lines[j].SetSum(tmp);
   };
 
   for(int i=1;i<Index_x;i++){
@@ -61,11 +65,24 @@ int solution(vector< vector<int> > &A){
       };
     };
   };
+  return result;
 };
 
-int main(){
+int main(int argc,char *argv[]){
   vector< vector<int> > A;
   A={{1, -1, 1}, {1, -1, 0}};
   cout<<solution(A)<<"\n";
+
+  A={{-1, 0,  1}, 
+     { 1, 0,  1},
+     { 1, 0, -1}};
+  cout<<solution(A)<<"\n";
+
+  A={{0, 0, 0}, {1, -1, 0}};
+  cout<<solution(A)<<"\n";
+
+  A={{}};
+  cout<<solution(A)<<"\n";
+ 
 
 };
