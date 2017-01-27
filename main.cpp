@@ -1,9 +1,12 @@
+#include <vector>
+
+
 class line{
   private: long long int Sum=0;
   
   public: 
   void Sum(vector<line> a){
-    for(i=0;i<a.size();i++)
+    for(int i=0;i<a.size();i++)
       Sum+=a[i];
   };
 
@@ -62,8 +65,8 @@ int solution(vector<vector<int>> &A){
 };
 
 int main(){
-  vector<vector<int>> &A{{1, -1, 1},
-                         {1, -1, 0}};
+  vector< vector<int> > A;
+  A={{1, -1, 1}, {1, -1, 0}};
   cout<<solution(A)<<"\n";
 
 };
