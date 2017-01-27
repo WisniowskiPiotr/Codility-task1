@@ -1,6 +1,5 @@
 #include <vector>
 
-
 class line{
   private: long long int Sum=0;
   
@@ -36,7 +35,7 @@ class line_collection{
   };
 };
 
-int solution(vector<vector<int>> &A){
+int solution(vector< vector<int> > &A){
   int Index_x=A.size();
   int Index_y=A[0].size();
   // co jeśli któryś wiersz ma mniej elementów?
